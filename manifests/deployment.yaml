@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todp-get
+spec:
+  selector:
+    matchLabels:
+      app: todp-get
+  template:
+    metadata:
+      labels:
+        app: todp-get
+    spec:
+      containers:
+      - name: todp-get
+        image: acrrg3.azurecr.io/todo-get-tasks-api:v1
+        ports:
+        - containerPort: 80
