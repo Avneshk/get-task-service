@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: todp-get
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: todp-get
